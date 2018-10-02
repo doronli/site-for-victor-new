@@ -19,15 +19,16 @@ $(document).ready(function(){
         var calcWithothInterest = monthlyRepayments * 12 * refundTime;
         var fee = calcWithothInterest - finalCalc;
         document.getElementById("tbodyTable").innerHTML = "";
+
         for(i = 4; i >= 0; i--){
-        var title = 10 + 5*i + " ans";
-        var refundTimePerYear = 10 + 5 * i;
-        // beggin the calc
-        var calc1 = 1 - 1 / Math.pow(1 + finalInterest / 12, 12 * refundTimePerYear);
-        var finalCalc = (monthlyRepayments * calc1) / (finalInterest / 12);
-        var calcWithothInterest = monthlyRepayments * 12 * refundTimePerYear;
-        var fee = calcWithothInterest - finalCalc;
-        buildTable(title, Math.round(finalCalc), Math.round(fee));
+            var title = 10 + 5*i + " ans";
+            var refundTimePerYear = 10 + 5 * i;
+            // beggin the calc
+            var calc1 = 1 - 1 / Math.pow(1 + finalInterest / 12, 12 * refundTimePerYear);
+            var finalCalc = (monthlyRepayments * calc1) / (finalInterest / 12);
+            var calcWithothInterest = monthlyRepayments * 12 * refundTimePerYear;
+            var fee = calcWithothInterest - finalCalc;
+            buildTable(title, Math.round(finalCalc), Math.round(fee));
         }
         buildHighChart();
         console.log("hello " + finalCalc + "  " + calcWithothInterest);
@@ -45,11 +46,7 @@ $(document).ready(function(){
         cell3.innerHTML = num2;
         }
     
-        // var str ="<tr>";
-        // str += "<th>45</th>"
-        // str+="<td>45</td>"
-        // str+= "</tr>"
-        // document.getElementById("tbodyTable").appendChild(str);
+        
     
     
     function buildHighChart(){
