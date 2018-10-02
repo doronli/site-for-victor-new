@@ -235,7 +235,7 @@ main {
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
-#pret-table{
+/* #pret-table{
     font-size: 110% !important;
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -247,7 +247,7 @@ main {
 }
 #pret-table > tr{
     border-bottom: 1px solid white;
-}
+} */
 
 @media screen and (min-width: 1171px) {
   .projects {

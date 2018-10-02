@@ -1,8 +1,13 @@
 $(document).ready(function(){
-        $('#insuranceForm').submit(function () {
-            CalcInsurance();
-            return false;
-        });
+    // add select options
+    for(var i = 1; i < 31; i++){
+        $("#refundTime").append(new Option(i,i));
+    }
+    
+    $('#insuranceForm').submit(function () {
+        CalcInsurance();
+        return false;
+    });
 
     
     function CalcInsurance(){
